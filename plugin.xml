@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="com.digitalvibes.swipeCards" version="0.1">
+<name>swipeCardsActivity</name>
+<js-module name="swipeCardsActivity" src="www/swipeCardsActivity.js">
+<clobbers target="cordova.plugins.swipeCardsActivity"/>
+</js-module>
+<platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+    <feature name="swipecards">
+        <param name="android-package" value="com.digitalvibes.swipeCards.swipeCardsActivity"/>
+    </feature>
+</config-file>
+
+<config-file target="AndroidManifest.xml" parent="/manifest/application">
+    <activity
+            android:name="com.digitalvibes.swipeCards.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+</config-file>
+
+<source-file src="src/android/swipeCardsActivity.java" target-dir="src/com/digitalvibes/swipeCards"/>
+<source-file src="src/android/MainActivity.java" target-dir="src/com/digitalvibes/swipeCards" /> 
+<source-file src="src/android/CardModel.java" target-dir="src/com/digitalvibes/swipeCards/model" /> 
+<source-file src="src/android/Likes.java" target-dir="src/com/digitalvibes/swipeCards/model" /> 
+<source-file src="src/android/Orientations.java" target-dir="src/com/digitalvibes/swipeCards/model" /> 
+<source-file src="src/android/BaseCardStackAdapter.java" target-dir="src/com/digitalvibes/swipeCards/view" /> 
+<source-file src="src/android/CardContainer.java" target-dir="src/com/digitalvibes/swipeCards/view" /> 
+<source-file src="src/android/CardStackAdapter.java" target-dir="src/com/digitalvibes/swipeCards/view" /> 
+<source-file src="src/android/SimpleCardStackAdapter.java" target-dir="src/com/digitalvibes/swipeCards/view" /> 
+<source-file src="src/android/Utils.java" target-dir="src/com/digitalvibes/swipeCards" /> 
+
+
+<resource-file src="src/android/res/mainlayout.xml" target="res/layout/mainlayout.xml" />
+<resource-file src="src/android/res/std_card_inner.xml" target="res/layout/std_card_inner.xml" />
+<resource-file src="src/android/res/bg_selector.xml" target="res/layout/bg_selector.xml" />
+
+
+<resource-file src="src/android/res/card_bg.9.png" target="res/drawable-mdpi/card_bg.9.png" />
+
+
+<resource-file src="src/android/res/dislike.png" target="res/drawable-mdpi/dislike.png" />
+<resource-file src="src/android/res/heart.png" target="res/drawable-mdpi/heart.png" />
+<resource-file src="src/android/res/like.png" target="res/drawable-mdpi/like.png" />
+<resource-file src="src/android/res/bg_card.xml" target="res/drawable-mdpi/bg_card.xml" />
+
+<resource-file src="src/android/res/attr.xml" target="res/values/attr.xml" />
+<resource-file src="src/android/res/styles.xml" target="res/values/styles.xml" />
+<resource-file src="src/android/res/strings.xml" target="res/values/strings.xml" />
+<resource-file src="src/android/res/dimens.xml" target="res/values/dimens.xml" />
+<resource-file src="src/android/res/colors.xml" target="res/values/colors.xml" />
+
+</platform>
+
+<platform name="ios">
+    <config-file parent="/*" target="config.xml">
+    <feature name="swipecards">
+        <param name="ios-package" value="swipecards"/>
+    </feature>
+</config-file>
+<header-file src="src/ios/DraggableView.h" />
+<header-file src="src/ios/DraggableViewBackground.h" />
+<header-file src="src/ios/OverlayView.h" />
+<source-file src="src/ios/swipecards.m"/>
+<source-file src="src/ios/DraggableView.m"/>
+<source-file src="src/ios/OverlayView.m"/>
+<source-file src="src/ios/DraggableViewBackground.m"/>
+<resource-file src="src/ios/images/noButton.png" />
+<resource-file src="src/ios/images/yesButton.png" />
+<resource-file src="src/ios/images/Oval 3 + Rectangle 11-1.png" />
+<resource-file src="src/ios/images/Oval 3 + Rectangle 11.png" />
+<resource-file src="src/ios/images/Oval 2 + Rectangle 10-1.png" />
+<resource-file src="src/ios/images/Oval 2 + Rectangle 10.png" />
+<resource-file src="src/ios/images/xButton.png" />
+<resource-file src="src/ios/images/checkButton.png" />
+</platform>
+</plugin>
