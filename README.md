@@ -1,6 +1,8 @@
 # Swipeable Cards Cordova Plugin
 
 [![Join the chat at https://gitter.im/DigitalVibes/swipeable-cards-cordova-plugin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/DigitalVibes/swipeable-cards-cordova-plugin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Code Climate](https://codeclimate.com/repos/566ef58fb5eaae4bfd000f51/badges/b80bc9900f78a0411b96/gpa.svg)](https://codeclimate.com/repos/566ef58fb5eaae4bfd000f51/feed)
+[![issues](https://img.shields.io/github/issues/DigitalVibes/swipeable-cards-cordova-plugin.svg?label=Issues)](https://github.com/DigitalVibes/swipeable-cards-cordova-plugin/issues)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg?label=License)](https://github.com/DigitalVibes/swipeable-cards-cordova-plugin/blob/master/LICENSE.md)
 
 ### Description
 This is a cordova plugin for tinder like ui on both android and iOS. The plugin feature a minimilastic version of the tinder cards layout. It is possible to send in your own objects containing image urls. 
